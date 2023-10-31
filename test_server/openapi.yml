@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  title: User API
+  version: 1.0.0
+servers:
+  - url: http://172.36.255.7:8888
+paths:
+  /api/users:
+    post:
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+      responses:
+        '201':
+          description: User created successfully
+        '400':
+          description: Bad request
+  /api/users/{username}:
+    get:
+      summary: Get user by username
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User retrieved successfully
+        '404':
+          description: User not found
+        '500':
+          description: Internal Server Error

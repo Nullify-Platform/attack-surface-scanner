@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: .
+    environment:
+      LOG_LEVEL: info
+    ports: [ 8888:8888 ]
