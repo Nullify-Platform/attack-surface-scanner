@@ -13,7 +13,7 @@ and add it to your path.
 ### Linux
 
 ```sh
-curl -o as https://github.com/nullify-platform/attack-surface-scanner/releases/latest/download/as_linux_amd64
+curl -L -o as https://github.com/nullify-platform/attack-surface-scanner/releases/latest/download/as_linux_amd64
 chmod +x as
 sudo mv as /usr/local/bin
 ```
